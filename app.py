@@ -6,7 +6,7 @@ from PIL import Image
 import tempfile
 
 # Load your trained PPE detection model
-model = YOLO("best.pt")  # Replace with your actual path
+model = YOLO("best (3).pt")  # Replace with your actual path
 
 st.set_page_config(page_title="🦺 PPE Detection System", layout="centered")
 st.title("🛡️ PPE Detection using YOLO")
