@@ -26,7 +26,7 @@ if mode == "🖼️ Upload Image":
 
         results = model(img_bgr)[0].plot()
         final_img = cv2.cvtColor(results, cv2.COLOR_BGR2RGB)
-        st.image(final_img, caption="Detection Result", use_column_width=True)
+        st.image(final_img, caption="Detection Result", use_container_width=True)
 
 # ---------------- VIDEO MODE ----------------
 elif mode == "🎥 Upload Video":
@@ -44,7 +44,7 @@ elif mode == "🎥 Upload Video":
                 break
             results = model(frame)[0].plot()
             frame_rgb = cv2.cvtColor(results, cv2.COLOR_BGR2RGB)
-            stframe.image(frame_rgb, channels="RGB", use_column_width=True)
+            stframe.image(frame_rgb, channels="RGB", use_container_width=True)
 
         cap.release()
 
@@ -64,7 +64,7 @@ elif mode == "📷 Live Webcam":
                 break
             results = model(frame)[0].plot()
             frame_rgb = cv2.cvtColor(results, cv2.COLOR_BGR2RGB)
-            stframe.image(frame_rgb, channels="RGB", use_column_width=True)
+            stframe.image(frame_rgb, channels="RGB", use_container_width=True)
 
         cap.release()
         st.success("Webcam stopped.")
