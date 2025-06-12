@@ -1,4 +1,7 @@
 streamlit
-ultralytics
 opencv-python
+pandas
+ultralytics
+numpy
 Pillow
+reportlab
